@@ -11,6 +11,8 @@ Bundle 'terryma/vim-multiple-cursors'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
 Bundle 'kien/ctrlp.vim'
+Bundle 'scrooloose/syntastic'
+Bundle 'sjl/gundo.vim'
 
 " Airline
 set laststatus=2
@@ -22,6 +24,10 @@ set noshowmode
 let g:ctrlp_show_hidden=1
 let g:ctrlp_custom_ignore='Local Settings\|Application Data\|AppData\|\.git'
 let g:ctrlp_clear_cache_on_exit=0
+
+" NERDTree
+let g:NERDTreeMinimalUI=1
+let g:NERDTreeChDirMode=2
 
 "}}}
 
@@ -86,6 +92,9 @@ let g:NERDTreeMapActivateNode="<F2>"
 let g:NERDTreeMapPreview="<F3>"
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif " Close if last window
+
+" Gundo
+nnoremap <F5> :GundoToggle<CR>
 
 " Clear search matches
 nnoremap <leader><space> :noh<cr>

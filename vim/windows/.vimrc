@@ -72,6 +72,7 @@ set wildmenu " Tab autocompletion
 set wildmode=list:longest,full " Autocompletion method
 set undodir=~\vimfiles\undo " Undo sequences storage location
 set undofile " Save undo sequences
+set dir=~\vimfiles\backup " Swapfile storage location
 
 set ignorecase " Ignore case
 set smartcase " Case-sensitive on uppercase

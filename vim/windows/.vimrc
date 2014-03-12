@@ -13,6 +13,8 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'sjl/gundo.vim'
+Bundle 'AutoComplPop'
+Bundle 'tpope/vim-surround'
 
 " Airline
 set laststatus=2
@@ -28,6 +30,9 @@ let g:ctrlp_clear_cache_on_exit=0
 " NERDTree
 let g:NERDTreeMinimalUI=1
 let g:NERDTreeChDirMode=2
+
+" AutoComplPop
+let g:acp_behaviorKeywordLength=2
 
 "}}}
 
@@ -109,10 +114,6 @@ nnoremap <Up> <NOP>
 nnoremap <Down> <NOP>
 nnoremap <Left> <NOP>
 nnoremap <Right> <NOP>
-inoremap <Up> <NOP>
-inoremap <Down> <NOP>
-inoremap <Left> <NOP>
-inoremap <Right> <NOP>
 nnoremap j gj
 nnoremap k gk
 "}}}

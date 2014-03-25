@@ -11,6 +11,10 @@ Bundle 'terryma/vim-multiple-cursors'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
 Bundle 'kien/ctrlp.vim'
+Bundle 'scrooloose/syntastic'
+Bundle 'sjl/gundo.vim'
+Bundle 'AutoComplPop'
+Bundle 'tpope/vim-surround'
 
 " Airline
 if has('gui_running') || &term=='xterm-256color' || &term=='putty-256color'
@@ -24,6 +28,13 @@ set laststatus=2
 let g:ctrlp_show_hidden=1
 let g:ctrlp_custom_ignore='Local Settings\|Application Data\|AppData\|\.git'
 let g:ctrlp_clear_cache_on_exit=0
+
+" NERDTree
+let g:NERDTreeMinimalUI=1
+let g:NERDTreeChDirMode=2
+
+" AutoComplPop
+let g:acp_behaviorKeywordLength=2
 
 "}}}
 
@@ -75,6 +86,7 @@ set wildmenu
 set wildmode=list:longest,full
 set undodir=~/.vim/undo
 set undofile
+set dir=~/.vim/backup " Swapfile storage location
 
 set ignorecase " Ignore case
 set smartcase " Case-sensitive on uppercase
@@ -96,8 +108,14 @@ let g:NERDTreeMapPreview="<F3>"
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif " Close if last window
 
+" Gundo
+nnoremap <F5> :GundoToggle<CR>
+
 " Clear search matches
 nnoremap <leader><space> :noh<cr>
+
+" Save some shift time
+nnoremap ; :
 
 " Break bad habits;
 " disable arrow key navigation
@@ -105,9 +123,7 @@ nnoremap <Up> <NOP>
 nnoremap <Down> <NOP>
 nnoremap <Left> <NOP>
 nnoremap <Right> <NOP>
-inoremap <Up> <NOP>
-inoremap <Down> <NOP>
-inoremap <Left> <NOP>
-inoremap <Right> <NOP>
+nnoremap j gj
+nnoremap k gk
 
 "}}}

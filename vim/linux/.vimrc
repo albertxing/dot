@@ -1,25 +1,41 @@
-"{{{ Bundles
+"{{{ Plugins
 
 " Vundle
 filetype off
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
-Bundle 'bling/vim-airline'
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'scrooloose/nerdtree'
-Bundle 'tpope/vim-fugitive'
-Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/syntastic'
-Bundle 'sjl/gundo.vim'
-Bundle 'AutoComplPop'
-Bundle 'tpope/vim-surround'
+Plugin 'gmarik/Vundle.vim'
+Plugin 'bling/vim-airline'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-fugitive'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'sjl/gundo.vim'
+Plugin 'AutoComplPop'
+Plugin 'tpope/vim-surround'
+
+call vundle#end()
 
 " Airline
 if has('gui_running') || &term=='xterm-256color' || &term=='putty-256color'
 	let g:airline_theme='base16'
 	let g:airline_powerline_fonts=1
+	let g:airline#extensions#tabline#enabled=1
+	let g:airline_mode_map = {
+				\ '__' : '-',
+				\ 'n'  : 'N',
+				\ 'i'  : 'I',
+				\ 'R'  : 'R',
+				\ 'c'  : 'C',
+				\ 'v'  : 'V',
+				\ 'V'  : 'V',
+				\ '' : 'V',
+				\ 's'  : 'S',
+				\ 'S'  : 'S',
+				\ '' : 'S',
+				\ }
 endif
 set noshowmode
 set laststatus=2
@@ -51,7 +67,7 @@ if has('gui_running') || &term=~'\(xterm\|putty\)-256color'
 	" Don't show no nothing
 	" And use DejaVu
 	set guioptions=ct
-	set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
+	set guifont=Source\ Code\ Pro\ for\ Powerline\ 10
 
 	" Set dark Ocean theme
 	set background=dark

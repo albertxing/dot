@@ -22,7 +22,6 @@ call vundle#end()
 if has('gui_running') || &term=='xterm-256color' || &term=='putty-256color'
 	let g:airline_theme='base16'
 	let g:airline_powerline_fonts=1
-	let g:airline#extensions#tabline#enabled=1
 	let g:airline_mode_map = {
 				\ '__' : '-',
 				\ 'n'  : 'N',

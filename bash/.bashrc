@@ -8,4 +8,4 @@ alias l='ls -o --color'
 alias la='ls -la --color'
 
 # Prompt
-export PS1="\n\[\e[34;40m\]┌ \w\n\[\e[34;40m\]└→ \[\e[0m\]"
+export PS1="\n\[\e[34;40m\]┌ \w\n\[\e[34;40m\]└─→ \[\e[0m\]"
